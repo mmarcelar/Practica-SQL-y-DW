@@ -1,4 +1,4 @@
-create table `practica-sql-436519.Keepcoding.ivr_detail` as 
+create table `Keepcoding.ivr_detail` as 
 SELECT
    C.ivr_id as calls_ivr_id,
  phone_number as calls_phone_number,
@@ -27,6 +27,6 @@ C.vdn_label as calls_vdn_label,
   billing_account_id as step_billing_account
 
 
-FROM `practica-sql-436519.Keepcoding.Calls` as C , `practica-sql-436519.Keepcoding.Modules` as M, `practica-sql-436519.Keepcoding.Steps`as S
+FROM `Keepcoding.Calls` as C , `Keepcoding.Modules` as M, `Keepcoding.Steps`as S
 WHERE C.ivr_id = M.ivr_id
   AND M.ivr_id = S.ivr_id
